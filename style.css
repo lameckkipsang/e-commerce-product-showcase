@@ -57,3 +57,9 @@ body {
     color: white;
     border-radius: 5px;
 }
+@media (max-width: 768px) {
+    .product-grid { grid-template-columns: 1fr; }
+}
+@media print {
+    .theme-label, .add-btn, .cart-sidebar { display: none; }
+}
