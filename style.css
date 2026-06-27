@@ -1,5 +1,59 @@
-#theme-switch:checked ~ body {
+#theme-switch:checked~body {
     --bg: #111827;
     --text: #f9fafb;
     --card-bg: #1f2937;
+}
+
+:root {
+    --bg: #ffffff;
+    --text: #111827;
+    --card-bg: #f9fafb;
+    --primary: #2563eb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+.product-showcase {
+    padding: 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.hidden-checkbox {
+    display: none;
+}
+
+.theme-label {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 5px;
 }
